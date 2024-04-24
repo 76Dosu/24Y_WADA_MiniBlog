@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -72,7 +72,7 @@ function PostViewPage(props) {
         db.collection('post').doc(postId).get().then(function(doc) {
             setPost(doc.data())
         })     
-    }, [])
+    },[]);
     
     //button width
     // const buttonRef = useRef(null);

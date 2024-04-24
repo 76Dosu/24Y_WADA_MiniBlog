@@ -7,10 +7,6 @@ const Wrapper = styled.div`
 
     padding: 24px;
     margin-bottom: 24px;
-<<<<<<< Updated upstream
-=======
-    margin-right:24px;
->>>>>>> Stashed changes
 
     display:flex;
     flex-direction: column;
@@ -29,7 +25,7 @@ const Wrapper = styled.div`
     &:nth-child(3n) {
         margin-right:0px;
     }
- `
+`
 
 const TitleText = styled.p`
     font-size: 20px;

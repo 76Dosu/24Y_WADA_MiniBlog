@@ -7,11 +7,7 @@ const Wrapper = styled.div`
     flex-direction:row;
     flex-wrap: wrap;
     align-items: flex-start;
-<<<<<<< Updated upstream
     justify-content: space-between;
-=======
-    justify-content: left;
->>>>>>> Stashed changes
 `
 
 function PostList(props) {

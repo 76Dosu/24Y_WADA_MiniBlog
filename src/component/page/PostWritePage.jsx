@@ -33,7 +33,7 @@ const InputWrap = styled.div`
     margin-bottom:24px;
 `
 
-const InputWrap_AIFS = styled(InputWrap)`
+const InputWrapAIFS = styled(InputWrap)`
     align-items: flex-start;
 `
 
@@ -64,10 +64,10 @@ function PostWritePage(props) {
                         <TextInput width="calc(100% - 100px)" borderRadius="8px" placeholder="제목을 입력하세요" height="48px" value={title} onChange={(e) => setTitle(e.target.value)}></TextInput>
                     </InputWrap>
 
-                    <InputWrap_AIFS>
+                    <InputWrapAIFS>
                         <TextInputTitle>내용</TextInputTitle>
                         <TextInput width="calc(100% - 100px)" borderRadius="8px" placeholder="내용을 입력하세요" height="300px" value={content} onChange={(e) => setContent(e.target.value)}></TextInput>
-                    </InputWrap_AIFS>
+                    </InputWrapAIFS>
                     
                     <Button title="글 작성하기"
                             width="fit-content"
