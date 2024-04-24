@@ -15,11 +15,9 @@ const StyledButton = styled.button`
     color:${props => props.textC};
     font-size: 18px;
     font-weight: bold;
-<<<<<<< Updated upstream
     float:right;
-=======
-    float:${props => props.float};
->>>>>>> Stashed changes
+
+    cursor:pointer;
 `
 
 function Button(props) {

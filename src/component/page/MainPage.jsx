@@ -45,7 +45,7 @@ function MainPage(props) {
         <Wrapper>
             <Header></Header>
 
-            <Title title="쉽고 간편하게"></Title>
+            <Title title="쉽고 간편하게 세상을 기록해보세요"></Title>
 
             <Container>
                 <PostList posts={data} onClickItem={(p) => {navigate('/post/' + p.id)}}></PostList>
