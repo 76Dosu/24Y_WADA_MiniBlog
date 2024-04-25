@@ -7,6 +7,7 @@ const Wrapper = styled.div`
 
     padding: 24px;
     margin-bottom: 24px;
+    margin-right: 24px;
 
     display:flex;
     flex-direction: column;
@@ -28,7 +29,7 @@ const Wrapper = styled.div`
 `
 
 const TitleText = styled.p`
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
 `
 

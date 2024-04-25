@@ -45,11 +45,17 @@ function MainPage(props) {
         <Wrapper>
             <Header></Header>
 
-            <Title title="쉽고 간편하게<br> 세상을 기록해보세요"></Title>
+            <Title title="쉽고 간편하게 \n세상을 기록해보세요"></Title>
 
             <Container>
                 <PostList posts={data} onClickItem={(p) => {navigate('/post/' + p.id)}}></PostList>
-                <Button float="right" title="글 쓰기" onClick={() => {navigate('/write')}}></Button>
+                <Button float="right"
+                        backColor="var(--main-color)"
+                        borderColor="var(--main-color)"
+                        textC="white"
+                
+                title="글 쓰기"
+                onClick={() => {navigate('/write')}}></Button>
             </Container>
         </Wrapper>
     )

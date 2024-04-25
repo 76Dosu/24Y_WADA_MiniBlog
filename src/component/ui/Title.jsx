@@ -14,7 +14,7 @@ const TitleText = styled.p`
     font-size: 40px;
     font-weight: bold;
     color:var(--main-textColor);
-    white-space: pre-line;
+    white-space: pre-wrap;
 `
 
 const DivideLine = styled.hr`

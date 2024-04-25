@@ -72,7 +72,7 @@ function PostViewPage(props) {
         db.collection('post').doc(postId).get().then(function(doc) {
             setPost(doc.data())
         })     
-    },[]);
+    });
     
     //button width
     // const buttonRef = useRef(null);
