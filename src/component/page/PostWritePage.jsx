@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import Button from "../ui/Button";
 import TextInput from '../ui/TextInput'
+import SelectInput from "../ui/SelectInput";
+
 import { useNavigate } from "react-router-dom";
 import Header from "../ui/Header";
 import Title from "../ui/Title";
@@ -48,6 +50,7 @@ function PostWritePage(props) {
     
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
+    const [option, setOption] = useState('')
 
     const navigate = useNavigate();
 
@@ -59,6 +62,11 @@ function PostWritePage(props) {
                 <Title title="글쓰기"></Title>
 
                 <WriteArea>
+                    <InputWrap>
+                        <TextInputTitle>분류</TextInputTitle>
+                        <SelectInput width="calc(100% - 100px)" borderRadius="8px" placeholder="제목을 입력하세요" height="48px" value={option} onChange={(e) => setOption(e.target.value)}></SelectInput>
+                    </InputWrap>
+
                     <InputWrap>
                         <TextInputTitle>제목</TextInputTitle>
                         <TextInput width="calc(100% - 100px)" borderRadius="8px" placeholder="제목을 입력하세요" height="48px" value={title} onChange={(e) => setTitle(e.target.value)}></TextInput>
@@ -77,12 +85,19 @@ function PostWritePage(props) {
                             ml="auto"
 
                     onClick={function() {
-                        let timestamp = new Date().getTime().toString();
-                        db.collection('post').doc(timestamp).set({
-                            id: timestamp,
+                        // let timestamp = new Date().getDate().toString();
+                        let year = new Date().getFullYear().toString();
+                        let month = new Date().getMonth().toString();
+                        let day = new Date().getDate().toString();
+
+                        let myTime = `${year}.${month}.${day}`
+
+                        db.collection('post').doc(myTime).set({
+                            id: myTime,
                             title: title,
                             content: content,
-                            commnents: []
+                            commnents: [],
+                            option:option
                         }).then(function() {
                             navigate('/')
                         })

@@ -28,9 +28,23 @@ const Wrapper = styled.div`
     }
 `
 
+const Category = styled.p`
+    font-size: 14px;
+    font-weight: 400;
+    color:#888;
+    margin-bottom: 4px;
+`   
+
 const TitleText = styled.p`
     font-size: 24px;
     font-weight: 500;
+`
+
+const WriteTime = styled.p`
+    font-size: 14px;
+    font-weight:400;
+    color:#888;
+    margin-top:auto;
 `
 
 function PostItem(props) {
@@ -39,7 +53,10 @@ function PostItem(props) {
 
     return (
         <Wrapper onClick={onClick}>
+            <Category>{post.option}</Category>
             <TitleText>{post.title}</TitleText>
+
+            <WriteTime>{post.id}</WriteTime>
         </Wrapper>
     )
 
