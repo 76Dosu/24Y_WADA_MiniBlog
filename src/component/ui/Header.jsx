@@ -16,6 +16,8 @@ const HeaderLogo = styled.p`
     margin:24px 0px;
     color: var(--main-color);
     float:left;
+
+    cursor: pointer;
 `
 const Gnb = styled.div`
     display:flex;
@@ -37,7 +39,7 @@ function Header(props) {
 
     return (
         <Wrapper>
-            <HeaderLogo>miniblog</HeaderLogo>
+            <HeaderLogo onClick={() => {navigate('/')}}>miniblog</HeaderLogo>
             <Gnb>
                 <GnbList>커뮤니티</GnbList>
                 <GnbList>마이페이지</GnbList>

@@ -31,7 +31,7 @@ function Title(props) {
     return (
 
         <Wrapper>
-            <TitleText>{title}</TitleText>
+            <TitleText><div dangerouslySetInnerHTML={{ __html: title }} /></TitleText>
             <DivideLine></DivideLine>
         </Wrapper>
 
