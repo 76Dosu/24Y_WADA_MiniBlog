@@ -9,7 +9,7 @@ import PostViewPage from './component/page/PostViewPage'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route index element={<MainPage />}></Route>
             <Route path="write" element={<PostWritePage />}></Route>

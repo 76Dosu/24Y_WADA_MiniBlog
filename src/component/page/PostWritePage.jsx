@@ -57,7 +57,7 @@ function PostWritePage(props) {
     
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-    const [option, setOption] = useState('')
+    const [option, setOption] = useState('리액트')
 
     const navigate = useNavigate();
 
