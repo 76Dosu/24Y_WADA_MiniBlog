@@ -7,6 +7,9 @@ import Button from "../ui/Button";
 import Header from "../ui/Header";
 import Title from "../ui/Title";
 
+import CategoryF from "../ui/CategoryF";
+import TimeF from "../ui/TimeF";
+
 // import data from '../../data.json'
 import { db } from '../../firebase'
 import { useNavigate } from "react-router-dom";
@@ -18,6 +21,16 @@ const Wrapper = styled.div`
     flex-direction:column;
     align-content:center;
     justify-content: center;
+`
+
+const ContentsHead = styled.div`
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+`
+
+const Filter = styled.div`
+    display:flex;
 `
 
 const Container = styled.div`
@@ -45,7 +58,14 @@ function MainPage(props) {
         <Wrapper>
             <Header></Header>
 
-            <Title title="쉽고 간편하게<br><span style='color:white; background-color:var(--main-color);'>일상을 기록</span> 해보세요"></Title>
+            <ContentsHead>
+                <Title title="쉽고 간편하게<br><span style='color:white; background-color:var(--main-color);'>일상을 기록</span> 해보세요"></Title>
+                <Filter>
+                    <CategoryF></CategoryF>
+                    <TimeF></TimeF>
+                </Filter>
+            </ContentsHead>
+            
             
             <Container>
                 <PostList posts={data} onClickItem={(p) => {navigate('/post/' + p.id)}}></PostList>

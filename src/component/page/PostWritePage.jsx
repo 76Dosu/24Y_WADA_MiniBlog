@@ -85,15 +85,16 @@ function PostWritePage(props) {
                             ml="auto"
 
                     onClick={function() {
-                        // let timestamp = new Date().getDate().toString();
+                        let timestamp = new Date().getTime().toString();
+
                         let year = new Date().getFullYear().toString();
                         let month = new Date().getMonth().toString();
                         let day = new Date().getDate().toString();
-
                         let myTime = `${year}.${month}.${day}`
 
-                        db.collection('post').doc(myTime).set({
-                            id: myTime,
+                        db.collection('post').doc(timestamp).set({
+                            id: timestamp,
+                            time : myTime,
                             title: title,
                             content: content,
                             commnents: [],

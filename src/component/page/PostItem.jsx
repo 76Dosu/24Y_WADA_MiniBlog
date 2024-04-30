@@ -56,7 +56,7 @@ function PostItem(props) {
             <Category>{post.option}</Category>
             <TitleText>{post.title}</TitleText>
 
-            <WriteTime>{post.id}</WriteTime>
+            <WriteTime>{post.time}</WriteTime>
         </Wrapper>
     )
 
