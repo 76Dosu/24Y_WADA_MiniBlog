@@ -50,6 +50,13 @@ const CommentLabel = styled.p`
     margin-bottom:24px;
 `
 
+const DivideLine = styled.hr`
+    color:var(--main-textColor);
+    height:2px;
+    border:1px solid var(--main-textColor);
+    margin:24px 0;
+`
+
 function PostViewPage(props) {
 
     const navigate = useNavigate();
@@ -89,7 +96,9 @@ function PostViewPage(props) {
         <Wrapper>
             <Container>
                 <Header></Header>
+                
                 <Title title={post.title}></Title>
+                <DivideLine></DivideLine>
 
                 <PostContainer>
                     <ContentText>{post.content}</ContentText>

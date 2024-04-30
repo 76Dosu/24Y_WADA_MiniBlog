@@ -64,7 +64,7 @@ function PostWritePage(props) {
                 <WriteArea>
                     <InputWrap>
                         <TextInputTitle>분류</TextInputTitle>
-                        <SelectInput width="calc(100% - 100px)" borderRadius="8px" placeholder="제목을 입력하세요" height="48px" value={option} onChange={(e) => setOption(e.target.value)}></SelectInput>
+                        <SelectInput width="20%" borderRadius="8px" placeholder="제목을 입력하세요" height="48px" value={option} onChange={(e) => setOption(e.target.value)}></SelectInput>
                     </InputWrap>
 
                     <InputWrap>

@@ -17,13 +17,6 @@ const TitleText = styled.p`
     white-space: pre-wrap;
 `
 
-const DivideLine = styled.hr`
-    color:var(--main-textColor);
-    height:2px;
-    border:1px solid var(--main-textColor);
-    margin:24px 0;
-`
-
 function Title(props) {
     
     const { title } = props;
@@ -32,7 +25,6 @@ function Title(props) {
 
         <Wrapper>
             <TitleText><div dangerouslySetInnerHTML={{ __html: title }} /></TitleText>
-            <DivideLine></DivideLine>
         </Wrapper>
 
     )

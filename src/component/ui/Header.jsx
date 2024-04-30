@@ -44,7 +44,7 @@ function Header(props) {
                 <GnbList>커뮤니티</GnbList>
                 <GnbList>마이페이지</GnbList>
             </Gnb>
-            <Button title="글 작성하기" 
+            <Button title="글쓰기" 
                     backColor="var(--main-color)"
                     borderColor="var(--main-color)"
                     textC="white"

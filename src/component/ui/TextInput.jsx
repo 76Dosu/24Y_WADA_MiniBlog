@@ -13,6 +13,7 @@ const StyledTextArea = styled.textarea`
     line-height:22px;
     color:var(--main-textColor);
     resize:none;
+    white-space:pre-line;
 
     &::placeholder {
         font-size:16px;
