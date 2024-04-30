@@ -24,6 +24,13 @@ const Container = styled.div`
     width:100%;
 `
 
+const DivideLine = styled.hr`
+    color:var(--main-textColor);
+    height:2px;
+    border:1px solid var(--main-textColor);
+    margin:24px 0;
+`
+
 const WriteArea = styled.div`
     display:flex;
     flex-direction: column;
@@ -60,6 +67,7 @@ function PostWritePage(props) {
             <Container>
                 <Header></Header>
                 <Title title="글쓰기"></Title>
+                <DivideLine></DivideLine>
 
                 <WriteArea>
                     <InputWrap>
@@ -97,7 +105,7 @@ function PostWritePage(props) {
                             time : myTime,
                             title: title,
                             content: content,
-                            commnents: [],
+                            comments: [],
                             option:option
                         }).then(function() {
                             navigate('/')

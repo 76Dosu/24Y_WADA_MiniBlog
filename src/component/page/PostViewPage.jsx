@@ -60,7 +60,7 @@ const DivideLine = styled.hr`
 function PostViewPage(props) {
 
     const navigate = useNavigate();
-    const postId = useParams().id
+    const postId = useParams().id;
 
     // const post = data.find((item) => {
     //     return item.id == postId;
@@ -69,7 +69,7 @@ function PostViewPage(props) {
     const [comment, setComment] = useState('');
 
     const [post, setPost] = useState({
-        id : "0",
+        id : "",
         title : "",
         content : "",
         comments : [],
@@ -134,7 +134,14 @@ function PostViewPage(props) {
                         let tempComments = post.comments;
 
                         tempComments.push({
-                            id: (postId + '_' + timestamp)
+                            id: (postId + '_' + timestamp),
+                            content:comment
+                        })       
+                        
+                        db.collection('post').doc(postId).update({
+                            comments: tempComments
+                        }).then(function() {
+                            setComment('')
                         })
                     }}></Button>
                 </CommentFrame>
