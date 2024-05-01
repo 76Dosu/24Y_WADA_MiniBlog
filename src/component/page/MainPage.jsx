@@ -84,7 +84,7 @@ function MainPage(props) {
     }, [])
 
     const navigate = useNavigate();
-    
+
     return (
         <Wrapper>
             <Header></Header>
