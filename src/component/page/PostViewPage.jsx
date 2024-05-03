@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { useNavigate, useParams } from "react-router-dom";
 
 import CommentList from "../list/CommentList";
-import Button from "../ui/Button";
+import FCButton from "../ui/FCButton";
+import NFCButton from "../ui/NFCButton";
 import TextInput from "../ui/TextInput";
 import Header from "../ui/Header";
 import Title from "../ui/Title";
@@ -40,6 +41,7 @@ const ContentText = styled.p`
 
 const CommentFrame = styled.div`
     display:flex;
+    justify-content:space-between;
     height:48px;
 `
 
@@ -104,28 +106,18 @@ function PostViewPage(props) {
                     <ContentText>{post.content}</ContentText>
                 </PostContainer>
 
-                <Button width="fit-content" 
-                        title="뒤로 가기"
-                        backColor="white"
-                        borderColor="var(--main-color)"
-                        textC="var(--main-color)"
-                        ml="auto"
-                        mt="24px"
-                        mb="24px"
-                        onClick={() => {navigate('/')}}></Button>
+                <NFCButton title="뒤로 가기"
+                           mt="24px"
+                           mb="24px"
+                        onClick={() => {navigate('/')}}></NFCButton>
 
                 <CommentLabel>댓글</CommentLabel>
                 <CommentList comments={post.comments}></CommentList>
 
                 <CommentFrame>
                     <TextInput borderRadius="80px" placeholder="댓글을 입력하세요" width="calc(90% - 24px)" value={comment} onChange={(e) => setComment(e.target.value)}></TextInput>
-                    <Button title="작성하기"
-                            width="fit-content"
-                            height="100%"
-                            backColor="var(--main-color)"
-                            borderColor="var(--main-color)"
-                            textC="white"
-                            ml="auto"
+                    <FCButton title="작성하기"
+                              height="100%"
 
                             // ref={buttonRef}
 
@@ -143,7 +135,7 @@ function PostViewPage(props) {
                         }).then(function() {
                             setComment('')
                         })
-                    }}></Button>
+                    }}></FCButton>
                 </CommentFrame>
                 
             </Container>

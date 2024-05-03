@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
-import Button from "../ui/Button";
+import FCButton from "../ui/FCButton";
 import TextInput from '../ui/TextInput'
 import SelectInput from "../ui/SelectInput";
 
@@ -32,8 +32,7 @@ const DivideLine = styled.hr`
 `
 
 const WriteArea = styled.div`
-    display:flex;
-    flex-direction: column;
+    width: 100%;
 `
 
 const InputWrap = styled.div`
@@ -51,6 +50,10 @@ const TextInputTitle = styled.p`
     font-weight:400px;
     color:var(--main-textColor);
     width:100px;
+`
+
+const FCButtonLeft = styled(FCButton)`
+    margin-left:auto !important;
 `
 
 function PostWritePage(props) {
@@ -85,12 +88,7 @@ function PostWritePage(props) {
                         <TextInput width="calc(100% - 100px)" borderRadius="8px" placeholder="내용을 입력하세요" height="300px" value={content} onChange={(e) => setContent(e.target.value)}></TextInput>
                     </InputWrapAIFS>
                     
-                    <Button title="글 작성하기"
-                            width="fit-content"
-                            backColor="var(--main-color)"
-                            borderColor="var(--main-color)"
-                            textC="white"
-                            ml="auto"
+                    <FCButtonLeft title="글 작성하기"
 
                     onClick={function() {
                         let timestamp = new Date().getTime().toString();
@@ -110,7 +108,7 @@ function PostWritePage(props) {
                         }).then(function() {
                             navigate('/')
                         })
-                    }}></Button>
+                    }}></FCButtonLeft>
                 </WriteArea>
                 
             </Container>

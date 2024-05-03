@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // ui import
 import PostList from "../list/PostList";
-import Button from "../ui/Button";
+import FCButton from "../ui/FCButton";
 import Header from "../ui/Header";
 import Title from "../ui/Title";
 
@@ -110,13 +110,8 @@ function MainPage(props) {
               
             <Container>
                 <PostList posts={data} onClickItem={(p) => {navigate('/post/' + p.id)}}></PostList>
-                <Button float="right"
-                        backColor="var(--main-color)"
-                        borderColor="var(--main-color)"
-                        textC="white"
-                
-                title="글쓰기"
-                onClick={() => {navigate('/write')}}></Button>
+                <FCButton title="글쓰기"
+                onClick={() => {navigate('/write')}}></FCButton>
             </Container>
         </Wrapper>
     )

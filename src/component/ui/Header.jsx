@@ -1,28 +1,27 @@
 import React from "react";
 import styled from 'styled-components'
-import Button from "./Button";
+import Button from "./FCButton";
 
 import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
     display:flex;
     align-items:center;
+    justify-content:flex-end;
     height: 80px;
 `
 
 const HeaderLogo = styled.p`
     font-family: "Cherry Bomb One";
     font-size: 32px;
-    margin:24px 0px;
+    margin:24px auto 24px 0px;
     color: var(--main-color);
-    float:left;
 
     cursor: pointer;
 `
 const Gnb = styled.div`
     display:flex;
     align-items:center;
-    margin-left:auto;
 `
 
 const GnbList = styled.div`
@@ -44,12 +43,7 @@ function Header(props) {
                 <GnbList>커뮤니티</GnbList>
                 <GnbList>마이페이지</GnbList>
             </Gnb>
-            <Button title="글쓰기" 
-                    backColor="var(--main-color)"
-                    borderColor="var(--main-color)"
-                    textC="white"
-            
-            onClick={() => {navigate('/write')}}></Button>
+            <Button title="글쓰기" onClick={() => {navigate('/write')}}></Button>
         </Wrapper>
     )
 }
