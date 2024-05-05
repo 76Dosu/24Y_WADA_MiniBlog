@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
     width:76.92%;
-    margin:0 auto;
+    margin:0 auto 100px auto;
     display:flex;
     flex-direction:column;
     align-content:center;

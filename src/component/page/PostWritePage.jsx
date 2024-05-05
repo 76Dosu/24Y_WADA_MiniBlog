@@ -94,9 +94,11 @@ function PostWritePage(props) {
                         let timestamp = new Date().getTime().toString();
 
                         let year = new Date().getFullYear().toString();
-                        let month = new Date().getMonth().toString();
+                        let month = new Date().getMonth();
+                        let displayMonth = (month + 1).toString();
+
                         let day = new Date().getDate().toString();
-                        let myTime = `${year}.${month}.${day}`
+                        let myTime = `${year}.${displayMonth}.${day}`
 
                         db.collection('post').doc(timestamp).set({
                             id: timestamp,
